@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="singleObj" class="com.piyush.domain.spring.FactoryExample.SingletonClass"
+          factory-method="getSingleObj"/>
+
+    <bean id="personObj" class="com.piyush.domain.spring.FactoryExample.Person">
+        <constructor-arg name="name" value="Kumar"/>
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="address" value="ND"/>
+    </bean>
+
+    <bean id="pObj" class="com.piyush.domain.spring.FactoryExample.SingletonClass"
+          factory-method="getPersonObj"/>
+
+    <bean id="pObj2" factory-bean="singleObj"
+          factory-method="getPersonObjFromInstanceObj"/>
+
+    <bean id="singleObj1" factory-bean="singleObj2"
+          factory-method="getSingleObjFromInstance"/>
+
+    <bean id="singleObj2" class="com.piyush.domain.spring.FactoryExample.SingletonClass"/>
+
+    <bean id="pObjFromFactory" class="com.piyush.domain.spring.FactoryExample.PersonFactory"/>
+
+</beans>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+
+    <bean id="student2" class="com.piyush.domain.spring.annotations.Student">
+        <property name="name" value="Ashutosh"/>
+        <property name="rollNo" value="2"/>
+    </bean>
+
+    <bean id="student1" class="com.piyush.domain.spring.annotations.Student">
+        <property name="name" value="Piyush"/>
+        <property name="rollNo" value="1"/>
+    </bean>
+
+
+    <bean id="student3" class="com.piyush.domain.spring.annotations.Student">
+        <property name="name" value="Iswar"/>
+        <property name="rollNo" value="3"/>
+    </bean>
+
+    <bean id="student5" class="com.piyush.domain.spring.annotations.Student">
+        <property name="name" value="srinivas"/>
+        <property name="rollNo" value="5"/>
+    </bean>
+
+    <bean id="student4" class="com.piyush.domain.spring.annotations.Student">
+        <property name="name" value="satish"/>
+        <property name="rollNo" value="4"/>
+    </bean>
+
+    <!--<bean id="myClass" class="com.piyush.domain.spring.annotations.MyClass">-->
+    <!--<property name="grade" value="12"/>-->
+    <!--<property name="classTeacher" value="Dr.Gupta"/>-->
+    <!--<property name="students">-->
+    <!--<list>-->
+    <!--<ref bean="student1"/>-->
+    <!--<ref bean="student2"/>-->
+    <!--<ref bean="student3"/>-->
+    <!--</list>-->
+    <!--</property>-->
+
+    <!--</bean>-->
+
+    <bean id="myClass" class="com.piyush.domain.spring.annotations.MyClass"></bean>
+
+    <bean id="student" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="student4"/>
+                <ref bean="student5"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentsss" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="student1"/>
+                <ref bean="student2"/>
+                <ref bean="student3"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+
+</beans>
