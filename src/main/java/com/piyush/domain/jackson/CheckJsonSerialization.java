@@ -19,7 +19,6 @@ public class CheckJsonSerialization {
         String jsonString = objectMapper.writeValueAsString(buildObject());
         System.out.println(jsonString);
         return jsonString;
-
     }
 
     private ProxyEmployee jsonDeserialization(String serializedString) throws IOException {
