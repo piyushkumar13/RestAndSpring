@@ -10,7 +10,7 @@
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
 
-    <jaxrs:server id="myRestServer" address="/init">
+    <jaxrs:server id="myRestServer" address="/">
         <jaxrs:serviceBeans>
             <ref bean="restPractice"/>
         </jaxrs:serviceBeans>
@@ -27,7 +27,7 @@
     </jaxrs:server>
 
     <bean id="restPractice"
-          class="com.piyush.domain.rest.RestPracticeImpl"/>
+          class="com.piyush.domain.restwithspringsandcxf.RestPracticeImpl"/>
 
     <bean id="jsonProvider"
           class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>

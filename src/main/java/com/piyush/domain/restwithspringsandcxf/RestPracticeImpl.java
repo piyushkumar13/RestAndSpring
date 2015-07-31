@@ -1,4 +1,4 @@
-package com.piyush.domain.rest;
+package com.piyush.domain.restwithspringsandcxf;
 
 public class RestPracticeImpl implements RestPracticeService {
 

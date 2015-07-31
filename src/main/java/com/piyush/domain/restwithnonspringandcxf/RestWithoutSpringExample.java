@@ -1,10 +1,9 @@
-package com.piyush.domain.rest;
+package com.piyush.domain.restwithnonspringandcxf;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-@Path("/practice")
-public interface RestPracticeService {
+public interface RestWithoutSpringExample {
 
     @GET
     @Path("/getname/{name}")
@@ -13,5 +12,6 @@ public interface RestPracticeService {
     @GET
     @Path("/jsonname")
     @Produces(MediaType.APPLICATION_JSON)
-    User getNameInJson(@QueryParam("name") String name);
+    UserDetails queryName(@QueryParam("name") String name);
+
 }
