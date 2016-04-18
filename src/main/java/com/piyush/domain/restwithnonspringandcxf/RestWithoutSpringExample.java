@@ -11,7 +11,7 @@ public interface RestWithoutSpringExample {
 
     @GET
     @Path("/jsonname")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_XML)
     UserDetails queryName(@QueryParam("name") String name);
 
 }

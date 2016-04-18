@@ -1,5 +1,8 @@
 package com.piyush.domain.restwithspringsandcxf;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RestPracticeImpl implements RestPracticeService {
 
     @Override
@@ -11,7 +14,14 @@ public class RestPracticeImpl implements RestPracticeService {
     public User getNameInJson(String name) {
         User user = new User();
         user.setId("1");
-        user.setName("Piyush");
+        user.setName(name);
+
+        List<String> degrees = new ArrayList<String>();
+        degrees.add("Mtech");
+        degrees.add("Btech");
+        user.setDegrees(degrees);
+
         return user;
     }
+
 }

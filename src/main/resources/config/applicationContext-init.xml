@@ -6,11 +6,33 @@
 
     <!--<context:component-scan base-package="com.piyush.domain.spring.ConstructsAndCallbacks"/>-->
 
-    <bean id="customer" class="com.piyush.domain.spring.ConstructsAndCallbacks.Customer"/>
+    <!--<bean id="customer" class="com.piyush.domain.spring.ConstructsAndCallbacks.Customer"/>-->
+    <bean id="customer" class="com.piyush.domain.spring.ConstructsAndCallbacks.Customer">
+        <property name="name" value="Piyush Kumar1"/>
+        <property name="companyName" value="Thermofisher Scientific1"/>
+    </bean>
 
-    <bean id="customerList" class="com.piyush.domain.spring.ConstructsAndCallbacks.CustomerList" init-method="initCustomerList"/>
 
-    <bean id="callbackExample" class="com.piyush.domain.spring.ConstructsAndCallbacks.CallbackExample"/>
-    <bean id="disposableBeanExample" class="com.piyush.domain.spring.ConstructsAndCallbacks.DisposableBeanExample"/>
+    <!--<bean id="customerList" class="com.piyush.domain.spring.ConstructsAndCallbacks.CustomerList"-->
+    <!--init-method="initCustomerList"/>-->
+    <bean id="customerList" class="com.piyush.domain.spring.ConstructsAndCallbacks.CustomerList" init-method="initCustomerList">
+        <property name="customers">
+            <list>
+                <ref bean="customer"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="callbackExample"
+          class="com.piyush.domain.spring.ConstructsAndCallbacks.InitializingBeanCallbackExample"/>
+
+    <bean id="disposableBeanExample"
+          class="com.piyush.domain.spring.ConstructsAndCallbacks.DisposableBeanExample"/>
+
+    <bean id="beanFactoryPostProcessorExample"
+          class="com.piyush.domain.spring.ConstructsAndCallbacks.BeanFactoryPostProcessorExample"/>
+
+    <bean id="beanPostProcessorExample"
+          class="com.piyush.domain.spring.ConstructsAndCallbacks.BeanPostProcessorExample"/>
 
 </beans>

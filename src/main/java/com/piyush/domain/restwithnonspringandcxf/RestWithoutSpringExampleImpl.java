@@ -9,8 +9,9 @@ public class RestWithoutSpringExampleImpl implements RestWithoutSpringExample {
     @Override
     public UserDetails queryName(String name) {
         UserDetails details = new UserDetails();
-        details.setName("Piyush");
+        details.setName(name);
         details.setCompany("Thermofisher Scientific");
+
         return details;
     }
 }
