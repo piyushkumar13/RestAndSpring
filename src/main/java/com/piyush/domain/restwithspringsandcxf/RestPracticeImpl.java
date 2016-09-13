@@ -1,5 +1,7 @@
 package com.piyush.domain.restwithspringsandcxf;
 
+import com.piyush.domain.restwithnonspringandcxf.UserDetails;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +24,15 @@ public class RestPracticeImpl implements RestPracticeService {
         user.setDegrees(degrees);
 
         return user;
+    }
+
+    @Override
+    public UserDetails getDetails() {
+        UserDetails details = new UserDetails();
+        details.setName("Piyush Kumar");
+        details.setCompany("Thermofisher Scientific");
+
+        return details;
     }
 
 }

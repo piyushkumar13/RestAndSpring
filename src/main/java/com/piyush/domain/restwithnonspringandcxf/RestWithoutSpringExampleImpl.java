@@ -14,4 +14,13 @@ public class RestWithoutSpringExampleImpl implements RestWithoutSpringExample {
 
         return details;
     }
+
+    @Override
+    public UserDetails getDetails() {
+        UserDetails details = new UserDetails();
+        details.setName("Piyush Kumar");
+        details.setCompany("Thermofisher Scientific");
+
+        return details;
+    }
 }

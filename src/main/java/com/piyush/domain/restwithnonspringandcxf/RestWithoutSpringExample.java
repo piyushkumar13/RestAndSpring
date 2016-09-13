@@ -14,4 +14,9 @@ public interface RestWithoutSpringExample {
     @Produces(MediaType.APPLICATION_XML)
     UserDetails queryName(@QueryParam("name") String name);
 
+    @GET
+    @Path("/auth/details")
+    @Produces(MediaType.APPLICATION_JSON)
+    UserDetails getDetails();
+
 }

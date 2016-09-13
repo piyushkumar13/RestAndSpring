@@ -17,6 +17,7 @@
 
         <jaxrs:providers>
             <ref bean="jsonProvider"/>
+            <ref bean="authFilters"/>
         </jaxrs:providers>
         <jaxrs:extensionMappings>
             <entry key="xml" value="application/xml"/>
@@ -31,5 +32,8 @@
 
     <bean id="jsonProvider"
           class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
+
+    <bean id="authFilters"
+          class="com.piyush.domain.AuthenticationFilter"/>
 
     </beans>
